@@ -106,6 +106,6 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 func LoggingMiddleware(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		log.Printf("%s %s %s", r.RemoteAddr, r.Method, r.URL)
-		next(w, r)
+		// next(w, r)
 	}
 }
